@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./colors.scss";
+@import "./reset.scss";
+
+body{
+  color: var(--textColor);
+}
+.categories {
+  li {
+    margin: 25px;
+    padding: 20px;
+    cursor: pointer;
+    height: 55px;
+    border: 2px var(--darken) solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: var(--darken);
+    }
+
+    &:active {
+      background-color: var(--darken);
+    }
+
+    &.active {
+      // color: ;
+      border-color: var(--accent);
+      background-color: var(--darken);
+    }
+  }
+}
+
+.ul-text{
+  li{
+    border-color: var(--textColor);
+    // visibility: hidden;
+    display: none;
+    &.active {
+      // visibility: visible;
+      display: block;
+      height: auto;
+      padding: 10px;
+      color: var(--textColor);
+      border: 5px var(--accent) double;
+      background-color: var(--darken-2);
+    }
+  }
+}
