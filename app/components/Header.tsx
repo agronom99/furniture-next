@@ -11,7 +11,6 @@ const Header = () => {
         className="absolute z-0 rounded-xl w-full h-full   "
         alt="Rectangle"
         src={Rectangle}
-        // height={200}
         priority
       />
       <div className="z-10 ">
@@ -24,7 +23,7 @@ const Header = () => {
           <Image
             src="/furniture_sofa.svg"
             alt="Logo"
-            className=" "
+            className=" h-24 md:h-52"
             width={200}
             height={200}
             priority
