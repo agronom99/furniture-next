@@ -1,4 +1,7 @@
+"use client"
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -20,38 +23,39 @@ const Header = () => {
           />
         </a>
       </div>
-      <div className=" flex flex-col sm:flex-row text-center items-center  ">
-        <a href="/about_us" className="" rel="noopener noreferrer">
+      <div className="flex flex-col sm:flex-row text-center items-center ">
+        
+        <Link href="/about_us" className="" rel="noopener noreferrer">
           <h2
             className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
           >
             Про нас{" "}
           </h2>
-        </a>
+        </Link>
 
-        <a href="" className="" rel="noopener noreferrer">
+        <Link href="/furniture" className="" rel="noopener noreferrer">
           <h2
             className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
           >
             Фурнітура{" "}
           </h2>
-        </a>
+        </Link>
 
-        <a href="" className="" rel="noopener noreferrer">
+        <Link href="/delivery_and_payment" className=" " rel="noopener noreferrer">
           <h2
-            className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
+            className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400 active:bg-slate-400`}
           >
             Доставка та оплата{" "}
           </h2>
-        </a>
+        </Link>
 
-        <a href="" className="" rel="noopener noreferrer">
+        <Link href="/contacts" className="" rel="noopener noreferrer">
           <h2
             className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
           >
             Контакти{" "}
           </h2>
-        </a>
+        </Link>
       </div>
     </div>
   );
