@@ -6,7 +6,7 @@ const AboutUs = () => {
   const [categoryId, setCategoryId] = React.useState(0);
 
   return (
-    <div className=" h-auto">
+    <div className=" h-auto w-11/12 mx-auto">
       <Categories
         value={categoryId}
         onClickCategory={(i) => setCategoryId(i)}

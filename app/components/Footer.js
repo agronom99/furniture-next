@@ -4,12 +4,11 @@ import Rectangle from "../../public/Rectangle_1441_h.jpg";
 
 const Footer = () => {
   return (
-    <div className=" rounded-xl">
+    <div className=" relative w-11/12 mx-auto ">
       <Image
-        className="absolute z-0 rounded-xl w-full h-1/3"
+        className="absolute z-0 rounded-xl w-full h-full "
         alt="Rectangle"
         src={Rectangle}
-        // height={200}
         priority
       />
       <div className="text-white relative text-center p-5">
