@@ -5,7 +5,7 @@ import Rectangle from "../../public/Rectangle_1441_h.jpg";
 import Navigation from './Navigation'
 
 const Header = () => {
-  const [navigationId, setNavigationId] = React.useState(0);
+  const [navigationId, setNavigationId] = React.useState();
   return (
     <div className=" flex flex-col lg:flex-row justify-around relative w-11/12 mx-auto ">
       <Image

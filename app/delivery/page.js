@@ -2,7 +2,7 @@ import React from 'react'
 
 const Delivery = () => {
   return (
-    <div>Delivery</div>
+    <div className=' flex w-11/12 mx-auto  border-neutral-800 border-solid rounded-xl'>Delivery</div>
   )
 }
 

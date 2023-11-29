@@ -1,17 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "colors";
+@import "reset";
+@import "categories";
+@import "header";
+@import "navigation";
+@import "category";
 
-@import "./colors.scss";
-@import "./reset.scss";
-@import "./categories.scss";
-@import "./header.scss";
-@import "./navigation.scss";
-
-
-
-
-body{
-  color: var(--textColor);
-}
-
+.sort{
+    li{
+      cursor: pointer;
+    }
+    
+  }
