@@ -1,7 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-// import AuthButton from "./components/auth-button";
-
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
 import Image from "next/image";
 import Rectangle1441 from "../public/Rectangle 1441.jpg";
@@ -9,29 +8,25 @@ import Rectangle1441 from "../public/Rectangle 1441.jpg";
 async function Home() {
   const supabase = createServerComponentClient({ cookies });
 
-  const { data } = await supabase.from("accessories_table").select("*");
+  const { data } = await supabase.from("comments").select("*");
   return (
-    <main className="">
-      <div className=" w-11/12 mx-auto">
+    <div className=" w-11/12 mx-auto relative ">
       <Image
-        className=" z-0 rounded-xl w-full"
+        className=" rounded-xl w-full "
         alt="Rectangle"
         src={Rectangle1441}
         // height={200}
         priority
       />
-      {/* <AuthButton /> */}
-      {/* <pre> {JSON.stringify(data, null, 2)}</pre> */}
-      {/* {data.map(el => (
-      <div key={el.id}>
-      <p>{el.title}</p>
-      <p>{el.price}</p>
-      <p>{el.imageURL}</p>
-      
+
+      <div className="absolute top-40 left-40">
+        <h1 className="  text-5xl font-bold text-white flex  ">
+          <FaAnglesLeft />
+          Фурнітура для меблів
+          <FaAnglesRight />
+        </h1>
       </div>
-      ))} */}
-      </div>
-    </main>
+    </div>
   );
 }
 
