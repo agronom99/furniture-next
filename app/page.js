@@ -22,14 +22,14 @@ async function Home() {
       />
       {/* <AuthButton /> */}
       <pre> {JSON.stringify(data, null, 2)}</pre>
-      {data.map(el => (
+      {/* {data.map(el => (
       <div key={el.id}>
       <p>{el.title}</p>
       <p>{el.price}</p>
       <p>{el.imageURL}</p>
       
       </div>
-      ))}
+      ))} */}
       </div>
     </main>
   );
