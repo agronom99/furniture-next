@@ -9,7 +9,7 @@ import Rectangle1441 from "../public/Rectangle 1441.jpg";
 async function Home() {
   const supabase = createServerComponentClient({ cookies });
 
-  const { data } = await supabase.from("comments").select("*");
+  const { data } = await supabase.from("accessories_table").select("*");
   return (
     <main className="">
       <div className=" w-11/12 mx-auto">
@@ -21,7 +21,7 @@ async function Home() {
         priority
       />
       {/* <AuthButton /> */}
-      <pre> {JSON.stringify(data, null, 2)}</pre>
+      {/* <pre> {JSON.stringify(data, null, 2)}</pre> */}
       {/* {data.map(el => (
       <div key={el.id}>
       <p>{el.title}</p>

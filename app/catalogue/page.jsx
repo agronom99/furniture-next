@@ -1,6 +1,7 @@
 // "use client";
 // import {useState} from "react";
 import { supabase } from "../../supabaseClient";
+import Link from "next/link";
 
 // import Category from "../components/catalog/Category.js";
 // import Sort from "../components/catalog/Sort.js";
@@ -9,9 +10,11 @@ import FurnitureBlock from "../components/FurnitureBlock/index.jsx";
 // import Skeleton from "../components/FurnitureBlock/Skeleton.jsx";
 
 async function CatalogueFurniture() {
-  const { data } = await supabase.from("comments").select("*");
+  const { data } = await supabase.from("accessories_table").select("*");
   const furniture = data.map((obj) => (
+    <Link key={obj.id} href={`/catalogue/${obj.id}`}>
     <FurnitureBlock key={obj.id} {...obj} />
+    </Link>
   ));
 
   // const skeletons = [...new Array(10)].map((_, index) => (
@@ -31,6 +34,7 @@ async function CatalogueFurniture() {
             furniture
           }
         </div>
+       
       </div>
       {/* <div className="row-span-1 col-span-2 w-4/12 h-auto my-5">
         <Pagination onChangePage={(number) => setCurrentPage(number)} />
