@@ -22,7 +22,7 @@ async function Home() {
       <div className="absolute top-40 left-40">
         <h1 className="  text-5xl font-bold text-white flex  ">
           <FaAnglesLeft />
-          Фурнітура для меблів
+          Фурнітура для мебeлі
           <FaAnglesRight />
         </h1>
       </div>
