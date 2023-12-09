@@ -18,6 +18,7 @@ async function Home() {
         // height={200}
         priority
       />
+      {/* <pre>{JSON.stringify(furniture, null, 2)}</pre> */}
 
       <div className="absolute top-40 left-40">
         <h1 className="  text-5xl font-bold text-white flex  ">
