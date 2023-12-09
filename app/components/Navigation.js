@@ -22,18 +22,20 @@ const Navigation = ({value,onClickNavigation}) => {
   ];
 
   return (
-    <div className="navigation flex flex-col sm:flex-row text-center items-center z-10 text-white ">
+    <div className="navigation flex flex-col sm:flex-row text-center items-center z-10 text-white  ">
       {navigations.map((navigationName, i) =>(
       <Link href={navigationName.path}
        key={i}
        onClick={() => onClickNavigation(i)} rel="noopener noreferrer"
        className={value === i ? "active" : ""}>
          
-        <h2
-          className={` text-sm md:text-xl font-semibold m-1 md:m-3 hover:bg-slate-400 `}
-        >
-          {navigationName.name}
-        </h2>
+       <div className="hover:bg-darken-7e rounded-xl">
+          <h2
+            className={` text-sm md:text-xl font-semibold m-1 md:m-3 `}
+          >
+            {navigationName.name}
+          </h2>
+       </div>
       </Link>
       ))}
       {/* <Link href="/catalogue" className="" rel="noopener noreferrer">

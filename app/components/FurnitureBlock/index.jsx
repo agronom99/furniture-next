@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaCertificate } from "react-icons/fa6";
 
 const FurnitureBlock = ({
   title,
@@ -20,7 +21,7 @@ const FurnitureBlock = ({
       />
       <ul className=" flex items-center">
         <li className=" mr-3">Арт.{article}</li>
-        <li className=" text-sm ">{availability}</li>
+        <li className=" text-sm flex items-center"> <span className="mr-1 w-2"><FaCertificate /></span> {availability}</li>
       </ul>
       <h4 className="">{title}</h4>
       {/* <p>{id}</p> */}
