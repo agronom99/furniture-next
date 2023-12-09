@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 function Category({ categoryName, onCategoryClick, selected }) {
   return (
     <div className={`category ${selected ? 'active' : ''}`} onClick={() => onCategoryClick(categoryName)}>
-      <h2 className=' m-5'>{categoryName}</h2>
+      <h2 className=' m-2.5'>{categoryName}</h2>
     </div>
   );
 }
