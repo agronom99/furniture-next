@@ -124,8 +124,8 @@ function CatalogueFurniture() {
     <div className="w-11/12 mx-auto">
       <div className="flex flex-row flex-wrap m-10">
         <div className="order-1 w-1/5 flex justify-center my-16  border-neutral-800 border-solid rounded-xl">
-          <div className="">
-            <h2 className=" mt-4 text-2xl font-bold w-48">
+          <div className="flex flex-col items-center ">
+            <h2 className=" mt-4 text-2xl font-bold w-48 text-center">
               Сортувати <br/> за категорією:
             </h2>
             {categoriesList}
