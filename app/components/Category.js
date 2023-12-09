@@ -1,15 +1,14 @@
-// components/CategoryButton.js
-import React from 'react';
+// components/Category.js
 
-function CategoryButton({ categoryName, onCategoryClick, isActive }) {
+import { useEffect, useState } from 'react';
+// import { supabase } from '../supabaseClient';
+
+function Category({ categoryName, onCategoryClick, selected }) {
   return (
-    <div
-      className={`category ${isActive ? 'active' : ''}`}
-      onClick={() => onCategoryClick(categoryName)}
-    >
-      <h2>{categoryName}</h2>
+    <div className={`category ${selected ? 'active' : ''}`} onClick={() => onCategoryClick(categoryName)}>
+      <h2 className=' m-5'>{categoryName}</h2>
     </div>
   );
 }
 
-export default CategoryButton;
+export default Category;

@@ -1,0 +1,30 @@
+/* styles.css (або відповідний файл стилів у вашому проекті) */
+
+.category.active {
+    background-color:#272F31; /* Чи інший колір на ваш вибір */
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    color: tomato;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .category:hover{
+    background-color: #272F31;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    // padding-top: 20px;
+    cursor: pointer;
+
+  }
+  

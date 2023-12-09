@@ -1,21 +1,21 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { supabase } from '../../supabaseClient';
-import FurnitureBlock from '../components/FurnitureBlock/index';
-import Category from '../components/Category';
-
-// Решта імпортів залишаються незмінними
+// pages/catalogue.js
+import "./styles.scss";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { supabase } from "../../supabaseClient";
+import FurnitureBlock from "../components/FurnitureBlock/index";
+import Category from "../components/Category";
 
 function CatalogueFurniture() {
   const [furniture, setFurniture] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filterByPrice, setFilterByPrice] = useState(null);
-  const [filterByTitle, setFilterByTitle] = useState('');
-  const [sortOrder, setSortOrder] = useState('asc');
-  const [sortBy, setSortBy] = useState('price');
+  const [filterByTitle, setFilterByTitle] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortBy, setSortBy] = useState("price");
 
   useEffect(() => {
     fetchData();
@@ -23,13 +23,17 @@ function CatalogueFurniture() {
 
   const fetchData = async () => {
     try {
-      const { data: furnitureData } = await supabase.from('accessories_table').select('*');
-      const { data: categoriesData } = await supabase.from('your_categories_table').select('category');
+      const { data: furnitureData } = await supabase
+        .from("accessories_table")
+        .select("*");
+      const { data: categoriesData } = await supabase
+        .from("your_categories_table")
+        .select("category");
 
       setFurniture(furnitureData);
-      setCategories(categoriesData.map(item => item.category));
+      setCategories(categoriesData.map((item) => item.category));
     } catch (error) {
-      console.error('Error fetching data:', error.message);
+      console.error("Error fetching data:", error.message);
     }
   };
 
@@ -59,18 +63,17 @@ function CatalogueFurniture() {
   };
 
   const sortFurniture = (a, b) => {
-    // Сортування за вибраним параметром
-    if (sortBy === 'price') {
-      // Сортування за ціною
+    if (sortBy === "price") {
       if (a.price !== b.price) {
-        return sortOrder === 'asc' ? a.price - b.price : b.price - a.price;
+        return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
       }
-    } else if (sortBy === 'title') {
-      // Сортування за заголовком
+    } else if (sortBy === "title") {
       const titleA = a.title.toLowerCase();
       const titleB = b.title.toLowerCase();
       if (titleA !== titleB) {
-        return sortOrder === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
+        return sortOrder === "asc"
+          ? titleA.localeCompare(titleB)
+          : titleB.localeCompare(titleA);
       }
     }
     return 0;
@@ -78,14 +81,12 @@ function CatalogueFurniture() {
 
   const filteredFurniture = furniture
     .filter((item) => {
-      // Фільтрація за категорією
-      const categoryFilter = selectedCategory === null || item.category === selectedCategory;
-
-      // Фільтрація за ціною
+      const categoryFilter =
+        selectedCategory === null || item.category === selectedCategory;
       const priceFilter = filterByPrice === null || item.price <= filterByPrice;
-
-      // Фільтрація за заголовком
-      const titleFilter = item.title.toLowerCase().includes(filterByTitle.toLowerCase());
+      const titleFilter = item.title
+        .toLowerCase()
+        .includes(filterByTitle.toLowerCase());
 
       return categoryFilter && priceFilter && titleFilter;
     })
@@ -101,35 +102,41 @@ function CatalogueFurniture() {
     </div>
   ));
 
+  const categoriesList = (
+    <ul className=" mt-5">
+      <Category
+        categoryName="Уся фурнітура"
+        onCategoryClick={handleAllCategoriesClick}
+        selected={selectedCategory === null}
+      />
+      {categories.map((category) => (
+        <Category
+          key={category}
+          categoryName={category}
+          onCategoryClick={handleCategoryClick}
+          selected={category === selectedCategory}
+        />
+      ))}
+    </ul>
+  );
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex flex-row flex-wrap m-10">
-        {/* Блок сортування за 'category' */}
-        <div className="order-1 w-1/4">
-          <div>
-            <h2>Сортувати за категорією</h2>
-            <ul>
-              <Category
-                categoryName="Уся фурнітура"
-                onCategoryClick={handleAllCategoriesClick}
-              />
-              {categories.map((category) => (
-                <Category
-                  key={category}
-                  categoryName={category}
-                  onCategoryClick={handleCategoryClick}
-                />
-              ))}
-            </ul>
+        <div className="order-1 w-1/5 flex justify-center my-16  border-neutral-800 border-solid rounded-xl">
+          <div className="">
+            <h2 className=" mt-4 text-xl font-bold">
+              Сортувати за категорією:
+            </h2>
+            {categoriesList}
           </div>
         </div>
-        {/* Фільтри за ціною, заголовком та сортування */}
-        <div className="order-2 w-3/4">
-          <div className=' flex items-center justify-end'>
-            <h2 className=''>Фільтрувати</h2>
-            <div className=' mx-3'>
+        <div className="order-2 w-4/5 ">
+          <div className=" flex items-center justify-end border-neutral-800 border-solid rounded-xl h-14 mx-5">
+            <h2>Фільтрувати</h2>
+            <div className=" mx-3">
               <label>
-                 за:
+                за:
                 <select value={sortBy} onChange={handleSortByChange}>
                   <option value="price">Вартістю</option>
                   <option value="title">Заголовком</option>
@@ -138,17 +145,14 @@ function CatalogueFurniture() {
             </div>
             <div>
               <label>
-                {/* Сортування: */}
                 <select value={sortOrder} onChange={handleSortChange}>
                   <option value="asc">за зростанням</option>
                   <option value="desc">за зниженням</option>
                 </select>
               </label>
             </div>
-            
           </div>
-          {/* Кінцевий блок елементів каталогу */}
-          <div className=' flex flex-wrap'>{furnitureElements}</div>
+          <div className=" flex flex-wrap">{furnitureElements}</div>
         </div>
       </div>
     </div>
@@ -156,7 +160,3 @@ function CatalogueFurniture() {
 }
 
 export default CatalogueFurniture;
-
-
-
-
