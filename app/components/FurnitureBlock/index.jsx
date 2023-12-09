@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FurnitureBlock = ({ title, price, imageURL, article, id, availability }) => {
   return (
-    <div className=" border-neutral-800 border-solid rounded-xl m-2 justify-center items-center flex flex-col p-3 h-auto w-60">
+    <div className=" border-neutral-800 border-solid rounded-xl m-5 justify-center items-center flex flex-col p-3 h-auto w-60">
       <Image
         className="h-auto w-auto "
         alt="img12"

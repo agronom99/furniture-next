@@ -26,6 +26,7 @@ async function Home() {
           <FaAnglesRight />
         </h1>
       </div>
+      
     </div>
   );
 }
