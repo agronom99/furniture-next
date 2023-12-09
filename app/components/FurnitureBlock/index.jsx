@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-const FurnitureBlock = ({ title, price, imageURL, article, id, availability }) => {
+const FurnitureBlock = ({
+  title,
+  price,
+  imageURL,
+  article,
+  id,
+  availability,
+}) => {
   return (
     <div className=" border-neutral-800 border-solid rounded-xl m-5 justify-center items-center flex flex-col p-3 h-auto w-64">
       <Image
@@ -11,9 +18,9 @@ const FurnitureBlock = ({ title, price, imageURL, article, id, availability }) =
         width={125}
         priority
       />
-      <ul className=" flex">
+      <ul className=" flex items-center">
         <li className=" mr-3">Арт.{article}</li>
-        <li className=" ">{availability}</li>
+        <li className=" text-sm ">{availability}</li>
       </ul>
       <h4 className="">{title}</h4>
       {/* <p>{id}</p> */}
