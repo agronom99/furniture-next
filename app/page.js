@@ -20,8 +20,8 @@ async function Home() {
       />
       {/* <pre>{JSON.stringify(furniture, null, 2)}</pre> */}
 
-      <div className="absolute top-40 left-40">
-        <h1 className="  text-5xl font-bold text-white flex ">
+      <div className="absolute top-10 left-10 md:top-20 md:left-16">
+        <h1 className="  text-xl md:text-5xl font-bold text-white flex ">
           <div className=" mr-5"><FaAnglesLeft /></div>
           Зробіть Ваш простір особливим:<br/> Вибір Вишуканої Меблевої Фурнітури
           <div className=" ml-5"><FaAnglesRight /></div>
