@@ -123,16 +123,16 @@ function CatalogueFurniture() {
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex flex-row flex-wrap m-10">
-        <div className="order-1 w-1/5 flex justify-center my-16  border-neutral-800 border-solid rounded-xl">
-          <div className="flex flex-col items-center ">
-            <h2 className=" mt-4 text-2xl font-bold w-48 text-center">
-              Сортувати <br/> за категорією:
+        <div className="order-1 flex justify-center my-16  border-neutral-800 border-solid rounded-xl">
+          <div className="flex flex-wrap md:flex-col items-center ">
+            <h2 className=" mt-4 text-sm sm:text-2xl sm:font-bold sm:w-48 text-center">
+              Сортувати <br /> за категорією:
             </h2>
             {categoriesList}
           </div>
         </div>
         <div className="order-2 w-4/5 ">
-          <div className=" flex items-center justify-end border-neutral-800 border-solid rounded-xl h-14 mx-5">
+          <div className=" flex items-center justify-end flex-col h-32 sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
             <h2>Фільтрувати</h2>
             <div className=" mx-3">
               <label>

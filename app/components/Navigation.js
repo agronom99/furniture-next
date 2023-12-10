@@ -22,7 +22,7 @@ const Navigation = ({value,onClickNavigation}) => {
   ];
 
   return (
-    <div className="navigation flex flex-col sm:flex-row text-center items-center z-10 text-white  ">
+    <div className="navigation flex flex-col sm:flex-row text-center items-center z-10 text-white ">
       {navigations.map((navigationName, i) =>(
       <Link href={navigationName.path}
        key={i}
@@ -38,32 +38,6 @@ const Navigation = ({value,onClickNavigation}) => {
        </div>
       </Link>
       ))}
-      {/* <Link href="/catalogue" className="" rel="noopener noreferrer">
-        <h2
-          className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
-        >
-          Каталог <span>&#128071;</span>{" "}
-        </h2>
-      </Link>
-      <Link
-        href="/delivery_and_payment"
-        className=" "
-        rel="noopener noreferrer"
-      >
-        <h2
-          className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400 active:bg-slate-400`}
-        >
-          Доставка та оплата{" "}
-        </h2>
-      </Link>
-
-      <Link href="/contacts" className="" rel="noopener noreferrer">
-        <h2
-          className={`text-sm md:text-xl font-semibold m-1 md:m-3 p-3 border-2 rounded-xl hover:bg-slate-400`}
-        >
-          Контакти{" "}
-        </h2>
-      </Link> */}
     </div>
   );
 };

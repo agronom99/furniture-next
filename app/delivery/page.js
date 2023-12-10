@@ -4,8 +4,8 @@ function Delivery() {
       <h1 className="m-5 text-5xl font-bold">УМОВИ ОПЛАТИ І ДОСТАВКИ</h1>
       <div className=" border-neutral-800 border-solid rounded-xl text-center m-2.5">
         <h2 className=" text-4xl font-semibold">Способи доставки:</h2>
-        <ul className=" flex my-10 ">
-          <li className="w-1/5 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+        <ul className=" flex flex-wrap my-10 ">
+          <li className=" w-56 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" my-3 font-bold text-xl">САМОВИВІЗ</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Заздалегідь уточніть наявність товару на потрібній філії і
@@ -15,7 +15,7 @@ function Delivery() {
               місті потрібно звернутися до менеджера Call-центру.
             </p>
           </li>
-          <li className="w-1/5 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className=" w-56 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">АДРЕСНА ДОСТАВКА</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Правила доставки Доставка товару з 09:00 до 18:00. Попередньо за
@@ -50,7 +50,7 @@ function Delivery() {
               або скористатися послугами перевізника Нова Пошта.
             </p>
           </li>
-          <li className="w-1/5 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className=" w-56 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">НОВА ПОШТА</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Вартість доставки тарифікується згідно з умовами перевізника.
@@ -75,7 +75,7 @@ function Delivery() {
               належним чином.
             </p>
           </li>
-          <li className="w-1/5 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className=" w-56 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">ДЕЛІВЕРІ</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Вартість доставки тарифікується згідно з умовами перевізника.
@@ -99,7 +99,7 @@ function Delivery() {
               належним чином.
             </p>
           </li>
-          <li className="w-1/5 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className=" w-56 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">УКРПОШТА</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Вартість доставки тарифікується згідно з умовами перевізника.
@@ -128,8 +128,8 @@ function Delivery() {
       </div>
       <div className=" border-neutral-800 border-solid rounded-xl text-center m-2.5">
         <h2 className=" text-4xl font-semibold">Способи оплати:</h2>
-        <ul className=" flex my-10">
-          <li className="w-1/4 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+        <ul className=" flex flex-wrap my-10">
+          <li className="w-72 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">ГОТІВКОВИЙ РОЗРАХУНОК</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Оплата готівкою при отриманні товару можлива у філіях компанії:
@@ -137,7 +137,7 @@ function Delivery() {
               національній валюті.
             </p>
           </li>
-          <li className="w-1/4 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className="w-72 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">
               БЕЗГОТІВКОВИЙ РОЗРАХУНОК
             </h3>
@@ -157,7 +157,7 @@ function Delivery() {
               надсилається поштою або віддається на руки (при самовивезенні).
             </p>
           </li>
-          <li className="w-1/4 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className="w-72 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">ОПЛАТА КАРТКОЮ</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Після обробки та погодження замовлення менеджер інтернет-магазину
@@ -167,7 +167,7 @@ function Delivery() {
               здійснити оплату карткою безпосередньо на касі.
             </p>
           </li>
-          <li className="w-1/4 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
+          <li className="w-72 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">НАЛОЖЕНИЙ ПЛАТІЖ</h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               Відправка посилок з післяплатою можлива тільки перевізником &#96;&#96;Нова

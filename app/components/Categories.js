@@ -1,11 +1,11 @@
 function Categories({ value, onClickCategory }) {
   const categories = ["Інформація", "Бренди", "Види фурнітури", "Співпраця з Клієнтами", "Партнери та Постачальники", "Якість та Гарантії"];
 
-  const categoriesText = require("./ProNas.json")
+  const categoriesText = require("../about_us/ProNas.json")
 
   return (
-    <div className="categories flex  ">
-      <ul className=" w-1/5">
+    <div className="categories flex flex-col sm:flex-row items-center justify-center  ">
+      <ul className=" w-full">
         {categories.map((categoryName, i) => (
           <li
             key={i}
@@ -16,7 +16,7 @@ function Categories({ value, onClickCategory }) {
           </li>
         ))}
       </ul>
-      <ul className="ul-text ml-10 w-4/5">
+      <ul className="ul-text ml-10 ">
         {categoriesText.map((categoryText, i) => (
           <li
             key={i}
