@@ -7,6 +7,7 @@ import { supabase } from "../../supabaseClient";
 import FurnitureBlock from "../components/FurnitureBlock/index";
 import Category from "../components/Category";
 import Pagination from "../components/Pagination/index";
+import "./styles.scss"
 
 const CatalogueFurniture = () => {
   const [furniture, setFurniture] = useState([]);
