@@ -139,7 +139,7 @@ function Delivery() {
           </li>
           <li className="w-1/4 h-80  text-center bg-neutral-400 rounded-xl m-2.5 p-3">
             <h3 className=" mb-3 font-bold text-xl">
-              БЕЗГОТІВКОВИЙ РОЗРАХУНОК (ЮРОСОБИ)
+              БЕЗГОТІВКОВИЙ РОЗРАХУНОК
             </h3>
             <p className="overflow-y-scroll h-4/5 pr-3">
               У філіях: Клієнту необхідно надати документи для формування
