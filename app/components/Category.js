@@ -1,5 +1,5 @@
 // components/Category.js
-
+"use client";
 import { useEffect, useState } from 'react';
 // import { supabase } from '../supabaseClient';
 
