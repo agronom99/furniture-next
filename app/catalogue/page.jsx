@@ -147,7 +147,7 @@ const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
           </div>
         </div>
         <div className="order-2 w-4/5">
-          <div className="flex items-center justify-end flex-col h-32 sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
+          <div className="flex items-center justify-end flex-col sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
             <h2>Фільтрувати</h2>
             <div className="mx-3">
               <label>
