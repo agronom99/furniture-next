@@ -48,14 +48,14 @@ const CatalogueFurniture = () => {
     setSelectedCategory(null);
   };
 
-  // const handlePriceChange = (e) => {
-  //   const price = parseFloat(e.target.value);
-  //   setFilterByPrice(!isNaN(price) ? price : null);
-  // };
+  const handlePriceChange = (e) => {
+    const price = parseFloat(e.target.value);
+    setFilterByPrice(!isNaN(price) ? price : null);
+  };
 
-  // const handleTitleChange = (e) => {
-  //   setFilterByTitle(e.target.value);
-  // };
+  const handleTitleChange = (e) => {
+    setFilterByTitle(e.target.value);
+  };
 
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
