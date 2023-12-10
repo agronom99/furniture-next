@@ -21,7 +21,7 @@ const Contacts = () => {
         src={Maps}
       ></iframe>
       <div className="flex flex-col items-center justify-center w-1/2 text-3xl">
-        <h2>Зворотній зв&#96;язок:</h2>
+        <h2>Зворотній звязок:</h2>
         <h3>Заявки приймаємо цілодобово!</h3>
       </div>
     </div>
