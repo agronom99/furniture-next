@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Navigation = ({value,onClickNavigation}) => {
+const Navigation = ({ value, onClickNavigation }) => {
   const navigations = [
     {
       name: "Про нас",
@@ -22,21 +22,21 @@ const Navigation = ({value,onClickNavigation}) => {
   ];
 
   return (
-    <div className="navigation flex flex-col sm:flex-row text-center items-center z-10 text-white ">
-      {navigations.map((navigationName, i) =>(
-      <Link href={navigationName.path}
-       key={i}
-       onClick={() => onClickNavigation(i)} rel="noopener noreferrer"
-       className={value === i ? "active" : ""}>
-         
-       <div className="hover:bg-darken-7e rounded-xl">
-          <h2
-            className={` text-sm md:text-xl font-semibold m-1 md:m-3 `}
-          >
-            {navigationName.name}
-          </h2>
-       </div>
-      </Link>
+    <div className="navigation h-40 flex flex-col mx-10 md:flex-row md:items-center z-10 ">
+      {navigations.map((navigationName, i) => (
+        <Link
+          href={navigationName.path}
+          key={i}
+          onClick={() => onClickNavigation(i)}
+          rel="noopener noreferrer"
+          className={value === i ? "active" : ""}
+        >
+          <div className="hover:bg-darken-7e rounded-xl text-white">
+            <h2 className={` text-xs lg:text-xl  `}>
+              {navigationName.name}
+            </h2>
+          </div>
+        </Link>
       ))}
     </div>
   );

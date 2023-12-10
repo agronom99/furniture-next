@@ -1,14 +1,14 @@
 "use client";
 
 // pages/catalogue.js
-import "./styles.scss";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "../../supabaseClient";
 import FurnitureBlock from "../components/FurnitureBlock/index";
 import Category from "../components/Category";
+import Pagination from "../components/Pagination/index";
 
-function CatalogueFurniture() {
+const CatalogueFurniture = () => {
   const [furniture, setFurniture] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -16,7 +16,9 @@ function CatalogueFurniture() {
   const [filterByTitle, setFilterByTitle] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
   const [sortBy, setSortBy] = useState("price");
-
+  const [currentPage, setCurrentPage] = useState(1); // Поточна сторінка
+  const itemsPerPage = 9; // Кількість елементів на сторінці
+  window.scrollTo(0, 0);
   useEffect(() => {
     fetchData();
   }, []);
@@ -45,14 +47,14 @@ function CatalogueFurniture() {
     setSelectedCategory(null);
   };
 
-  const handlePriceChange = (e) => {
-    const price = parseFloat(e.target.value);
-    setFilterByPrice(!isNaN(price) ? price : null);
-  };
+  // const handlePriceChange = (e) => {
+  //   const price = parseFloat(e.target.value);
+  //   setFilterByPrice(!isNaN(price) ? price : null);
+  // };
 
-  const handleTitleChange = (e) => {
-    setFilterByTitle(e.target.value);
-  };
+  // const handleTitleChange = (e) => {
+  //   setFilterByTitle(e.target.value);
+  // };
 
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
@@ -60,6 +62,10 @@ function CatalogueFurniture() {
 
   const handleSortByChange = (e) => {
     setSortBy(e.target.value);
+  };
+
+  const handlePageChange = (selectedPage) => {
+    setCurrentPage(selectedPage + 1);
   };
 
   const sortFurniture = (a, b) => {
@@ -70,11 +76,9 @@ function CatalogueFurniture() {
     } else if (sortBy === "title") {
       const titleA = a.title.toLowerCase();
       const titleB = b.title.toLowerCase();
-      if (titleA !== titleB) {
-        return sortOrder === "asc"
-          ? titleA.localeCompare(titleB)
-          : titleB.localeCompare(titleA);
-      }
+      return sortOrder === "asc"
+        ? titleA.localeCompare(titleB)
+        : titleB.localeCompare(titleA);
     }
     return 0;
   };
@@ -92,7 +96,18 @@ function CatalogueFurniture() {
     })
     .sort(sortFurniture);
 
-  const furnitureElements = filteredFurniture.map((obj) => (
+  console.log("filteredFurniture:", filteredFurniture);
+
+  const totalPages = Math.ceil(filteredFurniture.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
+
+
+  console.log("currentPage:", currentPage);
+  console.log("currentItems:", currentItems);
+
+  const furnitureElements = currentItems.map((obj) => (
     <div key={obj.id}>
       <Link href={`/catalogue/${obj.id}`} key={obj.id}>
         <div>
@@ -103,7 +118,7 @@ function CatalogueFurniture() {
   ));
 
   const categoriesList = (
-    <ul className=" mt-5">
+    <ul className="mt-5">
       <Category
         categoryName="Уся фурнітура"
         onCategoryClick={handleAllCategoriesClick}
@@ -123,18 +138,18 @@ function CatalogueFurniture() {
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex flex-row flex-wrap m-10">
-        <div className="order-1 flex justify-center my-16  border-neutral-800 border-solid rounded-xl">
-          <div className="flex flex-wrap md:flex-col items-center ">
-            <h2 className=" mt-4 text-sm sm:text-2xl sm:font-bold sm:w-48 text-center">
+        <div className="order-1 flex justify-center my-16 border-neutral-800 border-solid rounded-xl">
+          <div className="flex flex-wrap md:flex-col items-center">
+            <h2 className="mt-4 text-sm sm:text-2xl sm:font-bold sm:w-48 text-center">
               Сортувати <br /> за категорією:
             </h2>
             {categoriesList}
           </div>
         </div>
-        <div className="order-2 w-4/5 ">
-          <div className=" flex items-center justify-end flex-col h-32 sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
+        <div className="order-2 w-4/5">
+          <div className="flex items-center justify-end flex-col h-32 sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
             <h2>Фільтрувати</h2>
-            <div className=" mx-3">
+            <div className="mx-3">
               <label>
                 за:
                 <select value={sortBy} onChange={handleSortByChange}>
@@ -152,11 +167,14 @@ function CatalogueFurniture() {
               </label>
             </div>
           </div>
-          <div className=" flex flex-wrap">{furnitureElements}</div>
+          <div className="flex flex-wrap">{furnitureElements}</div>
         </div>
+      </div>
+      <div className="text-center m-5">
+        <Pagination pageCount={totalPages} onChangePage={handlePageChange} />
       </div>
     </div>
   );
-}
+};
 
 export default CatalogueFurniture;

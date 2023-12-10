@@ -16,7 +16,7 @@ const Footer = () => {
       src={Rectangle}
       priority
     />
-    <div className="z-10 ">
+    <div className="z-10 flex justify-between flex-row-reverse  ">
       <a
         className=""
         href="/"
@@ -32,12 +32,12 @@ const Footer = () => {
           priority
         />
       </a>
-    </div>
+    
     
      
        <Navigation value={navigationId}
         onClickNavigation={(i) => setNavigationId(i)}/>
-     
+     </div>
 
     </div>
   );
