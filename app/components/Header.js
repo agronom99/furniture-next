@@ -26,7 +26,7 @@ const Header = () => {
             <Image
               src="/furniture_sofa.svg"
               alt="Logo"
-              className=" h-52 md:h-52 hover:bg-darken-7e rounded-xl"
+              className=" h-52 w-auto md:h-52 hover:bg-darken-7e rounded-xl"
               width={200}
               height={200}
               priority
