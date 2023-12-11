@@ -1,6 +1,6 @@
-"use client"
+// "use client"
 
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 
 const Contacts = () => {
   const Maps =
