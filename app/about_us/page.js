@@ -1,5 +1,5 @@
-// "use client";
-// import React, { useEffect } from "react";
+"use client";
+import React, { useEffect } from "react";
 import Categories from "../components/Categories";
 
 const AboutUs = () => {
