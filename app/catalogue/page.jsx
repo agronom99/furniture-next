@@ -18,7 +18,7 @@ const CatalogueFurniture = () => {
   const [sortBy, setSortBy] = useState("price");
   const [currentPage, setCurrentPage] = useState(1); // Поточна сторінка
   const itemsPerPage = 9; // Кількість елементів на сторінці
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   useEffect(() => {
     fetchData();
