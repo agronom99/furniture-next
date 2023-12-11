@@ -1,11 +1,11 @@
-"use client";
-
+"use client"
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "../../supabaseClient";
 import FurnitureBlock from "../components/FurnitureBlock/index";
 import Category from "../components/Category";
 import Pagination from "../components/Pagination/index";
+import Filter from "../components/Filter/Filter"; // Додайте імпорт Filter
 import "./styles.scss";
 
 const CatalogueFurniture = () => {
@@ -18,7 +18,6 @@ const CatalogueFurniture = () => {
   const [sortBy, setSortBy] = useState("price");
   const [currentPage, setCurrentPage] = useState(1); // Поточна сторінка
   const itemsPerPage = 9; // Кількість елементів на сторінці
-  // window.scrollTo(0, 0);
 
   useEffect(() => {
     fetchData();
@@ -70,7 +69,18 @@ const CatalogueFurniture = () => {
   };
 
   const handlePageChange = (selectedPage) => {
+    // Додайте функціонал прокрутки вверх перед зміною сторінки
+    scrollToTop();
+
+    // Змінюємо поточну сторінку
     setCurrentPage(selectedPage + 1);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const sortFurniture = (a, b) => {
@@ -149,36 +159,18 @@ const CatalogueFurniture = () => {
           </div>
         </div>
         <div className="order-2 w-4/5">
-          <div className="flex items-center justify-end flex-col h-32 sm:h-16 sm:flex-row border-neutral-800 border-solid rounded-xl h-14 mx-5 p-5">
-            <h2 className=" my-3">Фільтрувати</h2>
-            <div className="mx-3">
-              <label>
-                за:
-                <select
-                  id="sortBy"
-                  name="sortBy"
-                  value={sortBy}
-                  onChange={handleSortByChange}
-                >
-                  <option value="price">Вартістю</option>
-                  <option value="title">Заголовком</option>
-                </select>
-              </label>
-            </div>
-            <div>
-              <label>
-                <select
-                  id="sortOrder"
-                  name="sortOrder"
-                  value={sortOrder}
-                  onChange={handleSortOrderChange}
-                >
-                  <option value="asc">за зростанням</option>
-                  <option value="desc">за зниженням</option>
-                </select>
-              </label>
-            </div>
-          </div>
+          <Filter
+            selectedCategory={selectedCategory}
+            onCategoryClick={handleCategoryClick}
+            handleAllCategoriesClick={handleAllCategoriesClick}
+            handlePriceChange={handlePriceChange}
+            handleTitleChange={handleTitleChange}
+            handleSortByChange={handleSortByChange}
+            handleSortOrderChange={handleSortOrderChange}
+            sortBy={sortBy}
+            sortOrder={sortOrder}
+            categories={categories}
+          />
           <div className="flex flex-wrap">{furnitureElements}</div>
         </div>
       </div>
