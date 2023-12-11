@@ -6,7 +6,7 @@ import { supabase } from "../../supabaseClient";
 import FurnitureBlock from "../components/FurnitureBlock/index";
 import Category from "../components/Category";
 import Pagination from "../components/Pagination/index";
-import "./styles.scss"
+import "./styles.scss";
 
 const CatalogueFurniture = () => {
   const [furniture, setFurniture] = useState([]);
@@ -19,6 +19,7 @@ const CatalogueFurniture = () => {
   const [currentPage, setCurrentPage] = useState(1); // Поточна сторінка
   const itemsPerPage = 9; // Кількість елементів на сторінці
   window.scrollTo(0, 0);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -64,6 +65,10 @@ const CatalogueFurniture = () => {
     setSortBy(e.target.value);
   };
 
+  const handleSortOrderChange = (e) => {
+    setSortOrder(e.target.value);
+  };
+
   const handlePageChange = (selectedPage) => {
     setCurrentPage(selectedPage + 1);
   };
@@ -96,16 +101,13 @@ const CatalogueFurniture = () => {
     })
     .sort(sortFurniture);
 
-  // console.log("filteredFurniture:", filteredFurniture);
-
   const totalPages = Math.ceil(filteredFurniture.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
-const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
-
-
-  // console.log("currentPage:", currentPage);
-  // console.log("currentItems:", currentItems);
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredFurniture.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const furnitureElements = currentItems.map((obj) => (
     <div key={obj.id}>
@@ -152,7 +154,12 @@ const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
             <div className="mx-3">
               <label>
                 за:
-                <select value={sortBy} onChange={handleSortByChange}>
+                <select
+                  id="sortBy"
+                  name="sortBy"
+                  value={sortBy}
+                  onChange={handleSortByChange}
+                >
                   <option value="price">Вартістю</option>
                   <option value="title">Заголовком</option>
                 </select>
@@ -160,7 +167,12 @@ const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
             </div>
             <div>
               <label>
-                <select value={sortOrder} onChange={handleSortChange}>
+                <select
+                  id="sortOrder"
+                  name="sortOrder"
+                  value={sortOrder}
+                  onChange={handleSortOrderChange}
+                >
                   <option value="asc">за зростанням</option>
                   <option value="desc">за зниженням</option>
                 </select>
