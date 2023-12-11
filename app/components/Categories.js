@@ -5,7 +5,7 @@ function Categories({ value, onClickCategory }) {
 
   return (
     <div className="categories flex flex-col sm:flex-row items-center justify-center  ">
-      <ul className=" w-full">
+      <ul className=" w-9/12 sm:w-4/12">
         {categories.map((categoryName, i) => (
           <li
             key={i}
@@ -16,7 +16,7 @@ function Categories({ value, onClickCategory }) {
           </li>
         ))}
       </ul>
-      <ul className="ul-text ml-10 ">
+      <ul className="ul-text ml-10 w-full ">
         {categoriesText.map((categoryText, i) => (
           <li
             key={i}
