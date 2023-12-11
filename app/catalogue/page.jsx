@@ -96,7 +96,7 @@ const CatalogueFurniture = () => {
     })
     .sort(sortFurniture);
 
-  console.log("filteredFurniture:", filteredFurniture);
+  // console.log("filteredFurniture:", filteredFurniture);
 
   const totalPages = Math.ceil(filteredFurniture.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -104,8 +104,8 @@ const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 const currentItems = filteredFurniture.slice(indexOfFirstItem, indexOfLastItem);
 
 
-  console.log("currentPage:", currentPage);
-  console.log("currentItems:", currentItems);
+  // console.log("currentPage:", currentPage);
+  // console.log("currentItems:", currentItems);
 
   const furnitureElements = currentItems.map((obj) => (
     <div key={obj.id}>
