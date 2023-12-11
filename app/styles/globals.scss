@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "colors";
 @import "reset";
 @import "categories";
 @import "header";
 @import "navigation";
-@import "category";
+// @import "category";
 
 .sort{
     li{
