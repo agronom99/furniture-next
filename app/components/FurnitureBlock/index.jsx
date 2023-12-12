@@ -20,7 +20,7 @@ const FurnitureBlock = ({
         priority
       />
       <ul className=" flex items-center">
-        <li className=" mr-3">Арт.{article}</li>
+        <li className=" mr-3">Арт.{id}</li>
         <li className=" text-sm flex items-center"> <span className="mr-1 w-2"><FaCertificate /></span> {availability}</li>
       </ul>
       <h4 className="">{title}</h4>
