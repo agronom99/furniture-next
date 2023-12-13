@@ -18,15 +18,10 @@ const PageFurniture = async ({ params: { id } }) => {
     return <div>Error loading data</div>;
   }
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  
 
   return (
-    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto">
+    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto absolute top-0">
       {/* <div>{id}</div> */}
       {/* Використовуйте data, а не post */}
       <Image
