@@ -22,7 +22,7 @@ const Navigation = ({ value, onClickNavigation }) => {
   ];
 
   return (
-    <div className="navigation h-40 flex flex-col mx-10 md:flex-row md:items-center z-10 ">
+    <div className="navigation h-40 md:h-16 flex flex-col mr-3 md:flex-row z-10 ">
       {navigations.map((navigationName, i) => (
         <Link
           href={navigationName.path}
@@ -32,7 +32,7 @@ const Navigation = ({ value, onClickNavigation }) => {
           className={value === i ? "active" : ""}
         >
           <div className="hover:bg-darken-7e rounded-xl text-white">
-            <h2 className={` text-xs lg:text-xl  `}>
+            <h2 className={` text-xs lg:text-lg  `}>
               {navigationName.name}
             </h2>
           </div>

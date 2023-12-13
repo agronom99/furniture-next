@@ -15,6 +15,7 @@ const config: Config = {
       },
       backgroundColor:{
         "darken-7e": "#7e7e7e",
+        "tomato": "#ff6347",
       }
     },
   },
