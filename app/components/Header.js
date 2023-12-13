@@ -41,10 +41,10 @@ const Header = () => {
 
         <div className=" lg:mb-28 ">
           <Link href="/cart" className=" flex flex-row text-white my-5 mr-7">
-            <div className=" border-solid w-24 pl-5 lg:py-2 rounded-l-2xl bg-tomato border-2">
+            <div className="hover:bg-red-700 border-solid w-24 pl-5 lg:py-2 rounded-l-2xl bg-tomato border-2">
               <span className="">10 грн.</span>
             </div>
-            <div className=" flex border-solid w-20 px-3 lg:py-2 items-center rounded-r-2xl bg-tomato border-2">
+            <div className="hover:bg-red-700 flex border-solid w-20 px-3 lg:py-2 items-center rounded-r-2xl bg-tomato border-2">
               <svg
                 width="18"
                 height="18"

@@ -10,7 +10,7 @@ const Cart = () => {
       <div className=" m-10">
         <div className=" ">
           <div className="">
-            <div className=" flex flex-col lg:flex-row lg:justify-between items-center bg-tomato py-3 px-10 mb-10 rounded-2xl text-white">
+            <div className=" flex flex-col lg:flex-row lg:justify-between items-center bg-tomato py-3 px-10 mb-10 rounded-2xl  text-white">
               <h2 className=" flex text-2xl">
                 <svg
                   className=" mx-5"
@@ -44,7 +44,7 @@ const Cart = () => {
                 </svg>
                 Корзина
               </h2>
-              <div className=" flex">
+              <div className=" flex hover:bg-red-700 rounded-2xl  border-solid border-2 w-[250px] p-2">
                 <svg
                   className=" mx-5 "
                   width="25"
@@ -135,11 +135,11 @@ const Cart = () => {
                   Вартість заказу: <b>10 грн.</b>{" "}
                 </span>
               </div>
-              <div className=" flex flex-col md:flex-row justify-around items-center">
-                <div className="">
+              <div className=" flex flex-col md:flex-row-reverse justify-around items-center">
+                <div className="hover:bg-red-700 m-5 bg-tomato py-2 px-5 rounded-2xl border-solid border-2 ">
                   <span>Заказати зараз</span>
                 </div>
-                <Link href="/" className="">
+                <Link href="/" className="hover:bg-red-700 bg-tomato py-2 px-5 rounded-2xl border-solid border-2">
                   <span>Повернутись назад</span>
                 </Link>
               </div>
