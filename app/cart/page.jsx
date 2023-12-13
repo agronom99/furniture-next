@@ -139,7 +139,7 @@ const Cart = () => {
                 <div className="hover:bg-red-700 m-5 bg-tomato py-2 px-5 rounded-2xl border-solid border-2 ">
                   <span>Заказати зараз</span>
                 </div>
-                <Link href="/" className="hover:bg-red-700 bg-tomato py-2 px-5 rounded-2xl border-solid border-2">
+                <Link href="/catalogue" className="hover:bg-red-700 bg-tomato py-2 px-5 rounded-2xl border-solid border-2">
                   <span>Повернутись назад</span>
                 </Link>
               </div>
