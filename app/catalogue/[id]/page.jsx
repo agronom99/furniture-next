@@ -21,7 +21,7 @@ const PageFurniture = async ({ params: { id } }) => {
   
 
   return (
-    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto top-0">
+    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto relative top-0 ">
       {/* <div>{id}</div> */}
       {/* Використовуйте data, а не post */}
       <Image
