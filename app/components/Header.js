@@ -41,8 +41,8 @@ const Header = () => {
 
         <div className=" lg:mb-28 ">
           <Link href="/cart" className=" flex flex-row text-white my-5 mr-7">
-            <div className=" border-solid w-24 px-3 lg:py-2 rounded-l-2xl bg-tomato border-2">
-              <span>520 грн.</span>
+            <div className=" border-solid w-24 pl-5 lg:py-2 rounded-l-2xl bg-tomato border-2">
+              <span className="">10 грн.</span>
             </div>
             <div className=" flex border-solid w-20 px-3 lg:py-2 items-center rounded-r-2xl bg-tomato border-2">
               <svg
@@ -74,7 +74,7 @@ const Header = () => {
                   strokeLinejoin="round"
                 ></path>
               </svg>
-              <span className=" px-3 lg:text-lg">3</span>
+              <span className=" px-3 lg:text-lg">1</span>
             </div>
           </Link>
         </div>

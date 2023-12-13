@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BiXCircle } from "react-icons/bi";
+import { FaRegSquarePlus, FaRegSquareMinus } from "react-icons/fa6";
 
 const Cart = () => {
   return (
@@ -84,82 +86,37 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className=" flex justify-around">
+            <div className=" flex justify-center">
               <div className=" flex flex-col items-center my-10">
-                <div className="">
+                <div className=" m-5">
                   <Image 
                   className=""
-                  href=""
+                  src="https://nbuhrmvoogojiuhaykgk.supabase.co/storage/v1/object/public/pictures/petlya_nakladna.jpeg"
                    alt="img" 
-                   width={30} 
-                   height={30} 
+                   width={200} 
+                   height={200} 
                    />
                 </div>
                 <div className="">
-                  <h3>С</h3>
-                  <p>т</p>
+                  <h3 className=" m-3">Петля накладна</h3>
+                  <p>Наявність уточнюйте</p>
                 </div>
-                <div className=" flex">
+                <div className=" flex items-center">
                   <div className="">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z"
-                        fill="#EB5A1E"
-                      ></path>
-                      <path
-                        d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
-                        fill="#EB5A1E"
-                      ></path>
-                    </svg>
+                  <FaRegSquareMinus />
                   </div>
-                  <b>1</b>
+                  <b className=" m-3">1</b>
                   <div className="">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z"
-                        fill="#EB5A1E"
-                      ></path>
-                      <path
-                        d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
-                        fill="#EB5A1E"
-                      ></path>
-                    </svg>
+                  <FaRegSquarePlus />
                   </div>
                 </div>
                 <div className=" flex">
-                  <b>770 грн.</b>
+                  <b>10 грн.</b>
                 </div>
               </div>
               <div className="">
-                  <div className=" flex">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z"
-                        fill="#EB5A1E"
-                      ></path>
-                      <path
-                        d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z"
-                        fill="#EB5A1E"
-                      ></path>
-                    </svg>
+                  <div className=" flex p-16">
+                  <BiXCircle className="w-7" />
                   </div>
                 </div>
             </div>
@@ -169,11 +126,11 @@ const Cart = () => {
               <div className=" flex justify-around">
                 <span>
                   {" "}
-                  Всього : <b>3 шт.</b>{" "}
+                  Всього : <b>1 шт.</b>{" "}
                 </span>
                 <span>
                   {" "}
-                  Вартість заказу: <b>900 грн.</b>{" "}
+                  Вартість заказу: <b>10 грн.</b>{" "}
                 </span>
               </div>
               <div className=" flex justify-around items-center">
