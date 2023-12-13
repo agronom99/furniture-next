@@ -18,14 +18,12 @@ const PageFurniture = async ({ params: { id } }) => {
     return <div>Error loading data</div>;
   }
 
-  
-
   return (
-    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto relative top-0 ">
+    <div className=" flex flex-col sm:flex-row items-center justify-center  border-neutral-800 border-solid rounded-xl w-11/12 mx-auto ">
       {/* <div>{id}</div> */}
       {/* Використовуйте data, а не post */}
       <Image
-        className="h-auto w-auto mx-20 my-10 sm:w-80"
+        className="h-auto w-auto mx-20 my-10 sm:w-80 "
         alt="img12"
         src={data.imageURL}
         height={100}
