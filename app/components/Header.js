@@ -34,11 +34,13 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="">
-          <Navigation
-            value={navigationId}
-            onClickNavigation={(i) => setNavigationId(i)}
-          />
+        <div className=" flex flex-col sm:flex-row">
+         <div className=" flex items-center">
+            <Navigation 
+              value={navigationId}
+              onClickNavigation={(i) => setNavigationId(i)}
+            />
+         </div>
   
           <div className=" lg:mb-28 ">
             <Link href="/cart" className=" flex flex-row text-white my-5 mr-7">
