@@ -10,7 +10,7 @@ const Cart = () => {
       <div className=" m-10">
         <div className=" ">
           <div className="">
-            <div className=" flex justify-between items-center bg-tomato py-3 px-10 mb-10 rounded-2xl text-white">
+            <div className=" flex flex-col lg:flex-row lg:justify-between items-center bg-tomato py-3 px-10 mb-10 rounded-2xl text-white">
               <h2 className=" flex text-2xl">
                 <svg
                   className=" mx-5"
@@ -90,11 +90,11 @@ const Cart = () => {
               <div className=" flex flex-col items-center my-10">
                 <div className=" m-5">
                   <Image 
-                  className=""
+                  className=" md:w-[200px]"
                   src="https://nbuhrmvoogojiuhaykgk.supabase.co/storage/v1/object/public/pictures/petlya_nakladna.jpeg"
                    alt="img" 
-                   width={200} 
-                   height={200} 
+                   width={100} 
+                   height={100} 
                    />
                 </div>
                 <div className="">
@@ -116,14 +116,14 @@ const Cart = () => {
               </div>
               <div className="">
                   <div className=" flex p-16">
-                  <BiXCircle className="w-7" />
+                  <BiXCircle className="w-14 sm:w-7" />
                   </div>
                 </div>
             </div>
 
 
             <div className=" flex flex-col">
-              <div className=" flex justify-around">
+              <div className=" flex flex-col items-center md:flex-row justify-around">
                 <span>
                   {" "}
                   Всього : <b>1 шт.</b>{" "}
@@ -133,13 +133,13 @@ const Cart = () => {
                   Вартість заказу: <b>10 грн.</b>{" "}
                 </span>
               </div>
-              <div className=" flex justify-around items-center">
-                <Link href="/" className="">
-                  <span>Повернутись назад</span>
-                </Link>
+              <div className=" flex flex-col md:flex-row justify-around items-center">
                 <div className="">
                   <span>Заказати зараз</span>
                 </div>
+                <Link href="/" className="">
+                  <span>Повернутись назад</span>
+                </Link>
               </div>
             </div>
           </div>
