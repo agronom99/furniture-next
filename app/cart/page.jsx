@@ -86,40 +86,42 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className=" flex justify-center">
-              <div className=" flex flex-col items-center my-10">
-                <div className=" m-5">
-                  <Image 
-                  className=" md:w-[200px]"
-                  src="https://nbuhrmvoogojiuhaykgk.supabase.co/storage/v1/object/public/pictures/petlya_nakladna.jpeg"
-                   alt="img" 
-                   width={100} 
-                   height={100} 
-                   />
-                </div>
-                <div className="">
-                  <h3 className=" m-3">Петля накладна</h3>
-                  <p>Наявність уточнюйте</p>
-                </div>
-                <div className=" flex items-center">
+           <div className=" flex justify-center">
+                <div className=" flex justify-center items-center border-neutral-800 border-solid rounded-xl p-5 m-5 sm:w-[450px]">
+                  <div className=" flex flex-col items-center">
+                    <div className=" m-5">
+                      <Image 
+                      className=" md:w-[200px]"
+                      src="https://nbuhrmvoogojiuhaykgk.supabase.co/storage/v1/object/public/pictures/petlya_nakladna.jpeg"
+                       alt="img" 
+                       width={100} 
+                       height={100} 
+                       />
+                    </div>
+                    <div className="">
+                      <h3 className=" m-3">Петля накладна</h3>
+                      <p>Наявність уточнюйте</p>
+                    </div>
+                    <div className=" flex items-center">
+                      <div className="">
+                      <FaRegSquareMinus />
+                      </div>
+                      <b className=" m-3">1</b>
+                      <div className="">
+                      <FaRegSquarePlus />
+                      </div>
+                    </div>
+                    <div className=" flex">
+                      <b>10 грн.</b>
+                    </div>
+                  </div>
                   <div className="">
-                  <FaRegSquareMinus />
-                  </div>
-                  <b className=" m-3">1</b>
-                  <div className="">
-                  <FaRegSquarePlus />
-                  </div>
+                      <div className=" flex py-10 sm:p-16">
+                      <BiXCircle className="w-7" />
+                      </div>
+                    </div>
                 </div>
-                <div className=" flex">
-                  <b>10 грн.</b>
-                </div>
-              </div>
-              <div className="">
-                  <div className=" flex p-16">
-                  <BiXCircle className="w-14 sm:w-7" />
-                  </div>
-                </div>
-            </div>
+           </div>
 
 
             <div className=" flex flex-col">
