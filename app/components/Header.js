@@ -15,7 +15,7 @@ const Header = () => {
         src={Rectangle}
         priority
       />
-      <div className=" relative flex flex-col lg:flex-row justify-center items-center">
+      <div className=" relative flex flex-col lg:flex-row justify-between items-center">
         <div className="z-10 ">
           <Link
             className=""
