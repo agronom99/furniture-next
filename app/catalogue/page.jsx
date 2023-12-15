@@ -126,6 +126,7 @@ const CatalogueFurniture = () => {
           <FurnitureBlock key={obj.id} {...obj} />
         </div>
       </Link>
+      <button className=" ml-7 mb-5 w-60 bg-tomato p-2 rounded-b-xl text-white">Додати до корзини</button>
     </div>
   ));
 
@@ -172,6 +173,7 @@ const CatalogueFurniture = () => {
             categories={categories}
           />
           <div className="flex flex-wrap">{furnitureElements}</div>
+          
         </div>
       </div>
       <div className="text-center m-5">
