@@ -10,7 +10,7 @@ const FurnitureBlock = ({
   availability,
 }) => {
   return (
-    <div className=" border-neutral-800 border-solid rounded-xl mx-5 justify-center items-center flex flex-col p-3 h-auto w-64">
+    <div className=" border-neutral-800 border-solid rounded-xl mx-5 mt-5 justify-center items-center flex flex-col p-3 h-auto w-64">
       <Image
         className="h-auto w-auto "
         alt="img12"
