@@ -15,6 +15,8 @@ const Header = () => {
         className="absolute z-0 rounded-xl w-full h-full   "
         alt="Rectangle"
         src={Rectangle}
+        width={100}
+        height={100}
         priority
       />
       <div className=" relative flex flex-row lg:flex-row justify-between items-center">
